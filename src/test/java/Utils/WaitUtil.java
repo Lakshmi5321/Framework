@@ -1,4 +1,6 @@
 package Utils;
 
-public class WaitUtil {
+public class WaitUtil
+{
+
 }
