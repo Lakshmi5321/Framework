@@ -38,7 +38,4 @@ public class WaitUtil
     {
         return wait.until(ExpectedConditions.textToBePresentInElementLocated(locator,value));
     }
-public class WaitUtil
-{
-
 }

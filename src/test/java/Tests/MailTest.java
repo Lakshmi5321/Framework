@@ -1,4 +1,6 @@
 package Tests;
 
-public class MailTest {
+public class MailTest
+{
+
 }

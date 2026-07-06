@@ -1,4 +1,6 @@
 package Pages;
 
-public class MailPage {
+public class MailPage
+{
+
 }

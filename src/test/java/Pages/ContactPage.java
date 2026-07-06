@@ -1,4 +1,6 @@
 package Pages;
 
-public class ContactPage {
+public class ContactPage
+{
+
 }
