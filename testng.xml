@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="G:/Appium/CI_CD_Jenkins_Git_Github">
-        <classes/>
+
+<suite name="Test Suite">
+
+    <test name = "ContactTest">
+        <parameter name="deviceName" value="Pixel 10 Pro Fold"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="17"/>
+        <parameter name="udid" value="4C271FDCG000LZ"/>
+        <parameter name="appPackage" value="com.google.android.dialer"/>
+        <parameter name="appActivity" value="com.google.android.dialer.extensions.GoogleDialtactsActivity"/>
+        <parameter name="appName" value="Phone"/>
+
+        <classes>
+            <class name="Tests.ContactTest">
+                <methods>
+                    <include name="addContactTest"/>
+                    <include name="editContactTest"/>
+                    <include name="deleteContactTest"/>
+                </methods>
+            </class>
+        </classes>
     </test>
+
+    <test name = "MailTest">
+        <parameter name="deviceName" value="Pixel 10 Pro Fold"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="platformVersion" value="17"/>
+        <parameter name="udid" value="4C271FDCG000LZ"/>
+        <parameter name="appPackage" value="com.google.android.gm"/>
+        <parameter name="appActivity" value="com.google.android.gm.ConversationListActivityGmail"/>
+        <parameter name="appName" value="Mail"/>
+
+        <classes>
+            <class name="Tests.MailTest">
+                <methods>
+                    <include name="sendMailTest"/>
+                    <include name="sendMeetTest"/>
+                    <include name="checkThemeTest"/>
+                    <include name="checkManageNotificationsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
 </suite>

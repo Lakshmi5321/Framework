@@ -35,7 +35,7 @@ public class BaseClass
     @Parameters({"appName","appPackage","appActivity"})
     public void reset(String appName,String appPackage,String appActivity) throws IOException, InterruptedException
     {
-        if(appName.equals("Gmail"))
+        if(appName.equals("Mail"))
         {
             driver.terminateApp("com.google.android.gm");
             Runtime.getRuntime().exec("adb shell pm clear com.google.android.gm").waitFor();

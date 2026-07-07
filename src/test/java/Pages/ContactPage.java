@@ -51,11 +51,13 @@ public class ContactPage extends BaseUtil
 
     public void sendCompanyName(String cname)
     {
+        waitUtil.waitForVisibility(companyName).clear();
         waitUtil.waitForVisibility(companyName).sendKeys(cname);
     }
 
     public void sendPhoneNumber(String phone)
     {
+        waitUtil.waitForVisibility(phoneNumber).clear();
         waitUtil.waitForVisibility(phoneNumber).sendKeys(phone);
     }
 
@@ -79,9 +81,9 @@ public class ContactPage extends BaseUtil
         waitUtil.waitForVisibility(searchBar).click();
     }
 
-    public void clickSearchContact()
+    public void sendSearchContact(String search)
     {
-        waitUtil.waitForVisibility(searchContact).click();
+        waitUtil.waitForVisibility(searchContact).sendKeys(search);
     }
 
     public void clickSearchResult()
