@@ -141,7 +141,7 @@ public class MailSearchEngine
             case "Click light" : mailPage.clickLight();
             break;
 
-            case "Check theme text" : Assert.assertTrue(mailPage.checkThemeText("Light "));
+            case "Check theme text" : Assert.assertTrue(mailPage.checkThemeText("Light"));
             break;
         }
     }
@@ -186,7 +186,7 @@ public class MailSearchEngine
             case "Doubletap all gmail notifications toggle" : mailPage.doubleTapAction();
             break;
 
-            case "Check all gmail notifications text" : Assert.assertTrue(mailPage.checkAllGmailNotificationsText("notifications"));
+            case "Check all gmail notifications text" : Assert.assertTrue(mailPage.checkAllGmailNotificationsText("Manage notifications"));
             break;
         }
     }
