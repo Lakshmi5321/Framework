@@ -37,7 +37,7 @@ public class ContactSearchEngine
             case "Save" : contactPage.clickSave();
             break;
 
-            case "Title" : String str = firstName+" "+lastName;
+            case "Title" : String str = firstName+"  "+lastName;
                            contactPage.checkTitle(str);
                            break;
         }

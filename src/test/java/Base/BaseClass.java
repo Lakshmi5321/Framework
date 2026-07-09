@@ -63,7 +63,8 @@ public class BaseClass
         driver.quit();
     }
 
-    public static String subFolder = "";
+    public static String subFolder;
+
     public void getScreenshot(String fileName) throws IOException
     {
         if(subFolder == null)
@@ -75,7 +76,7 @@ public class BaseClass
 
         TakesScreenshot takesScreenshot = (TakesScreenshot)driver;
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
-        File destination = new File(System.getProperty("user.dir")+"/ExtentReports/Screenshots/"+subFolder+"/"+fileName);
+        File destination = new File(System.getProperty("user.dir")+"/ExtentReports/Screenshots/"+subFolder+"/"+fileName+".jpg");
         FileUtils.copyFile(source,destination);
     }
 }
