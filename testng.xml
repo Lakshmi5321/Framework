@@ -3,6 +3,10 @@
 
 <suite name="Test Suite">
 
+    <listeners>
+        <listener class-name="Listener.MyListener"/>
+    </listeners>
+
     <test name = "ContactTest">
         <parameter name="deviceName" value="Pixel 10 Pro Fold"/>
         <parameter name="platformName" value="Android"/>

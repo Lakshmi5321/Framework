@@ -21,10 +21,10 @@ public class ContactPage extends BaseUtil
     By companyName = By.xpath("//android.view.View[@index='0']/child::android.view.View[@index='3']/child::android.widget.EditText[@index='0']");
     By phoneNumber = By.xpath("//android.view.View[@index='0']/child::android.view.View[@index='4']/child::android.widget.EditText[@index='0']");
     By save = By.xpath("//android.view.View[@index='0']/child::android.view.View[@index='3']/child::android.widget.TextView[@index='0']");
-    By title = By.xpath("//android.widget.TextView[@resource-id='com.google.android.contacts:id/large_title']");
+    By title = By.xpath("//android.view.ViewGroup[@index = '2']/descendant::androidx.compose.ui.platform.ComposeView[@index= '0']/descendant::android.view.View[@index = '0']/child::android.widget.TextView[@index = '0']");
 
-    By editIcon = By.id("com.google.android.dialer:id/open_search_bar_text_view");
-    By searchBar = By.xpath("com.google.android.dialer:id/open_search_view_edit_text");
+    By editIcon = By.id("com.google.android.contacts:id/menu_insert_or_edit");
+    By searchBar = By.id("com.google.android.dialer:id/open_search_bar_text_view");
     By searchContact = By.id("com.google.android.dialer:id/open_search_view_edit_text");
     By searchResult = By.id("com.google.android.dialer:id/photo");
     By deleteBar = By.xpath("//android.widget.TextView[@text='Delete']");
@@ -57,7 +57,6 @@ public class ContactPage extends BaseUtil
 
     public void sendPhoneNumber(String phone)
     {
-        waitUtil.waitForVisibility(phoneNumber).clear();
         waitUtil.waitForVisibility(phoneNumber).sendKeys(phone);
     }
 

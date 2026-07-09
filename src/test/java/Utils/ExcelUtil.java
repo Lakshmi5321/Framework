@@ -22,7 +22,7 @@ public class ExcelUtil
 
         List<List<String>> data = new ArrayList<>();
 
-        for(int i=0;i<rows;i++)
+        for(int i=0;i<=rows;i++)
         {
             Row row = sheet.getRow(i);
 
@@ -50,8 +50,11 @@ public class ExcelUtil
                     }
                 }
                 data.add(rowData);
+                System.out.println(rowData);
             }
         }
+        workbook.close();
+        fis.close();
         return data;
     }
 }

@@ -31,6 +31,9 @@ public class ContactSearchEngine
             case "Company name" : contactPage.sendCompanyName(companyName);
             break;
 
+            case "Phone number" : contactPage.sendPhoneNumber(phoneNumber);
+            break;
+
             case "Save" : contactPage.clickSave();
             break;
 
@@ -40,11 +43,12 @@ public class ContactSearchEngine
         }
     }
 
-    public void execute_EditContactKeyword(String keyword,String searchContact,String firstName,String lastName,String companyName,String phoneNumber)
+    public void execute_EditContactKeyword(String keyword,String searchContact,String firstName,String lastName,String companyName,String phoneNumber) throws InterruptedException
     {
         switch(keyword)
         {
             case "Search bar" : contactPage.clickSearchBar();
+            Thread.sleep(3000);
             break;
 
             case "Search contact" : contactPage.sendSearchContact(searchContact);
@@ -63,6 +67,9 @@ public class ContactSearchEngine
                 break;
 
             case "Company name" : contactPage.sendCompanyName(companyName);
+                break;
+
+            case "Phone number" : contactPage.sendPhoneNumber(phoneNumber);
                 break;
 
             case "Save" : contactPage.clickSave();

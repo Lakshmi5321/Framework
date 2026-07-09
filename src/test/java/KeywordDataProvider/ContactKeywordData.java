@@ -9,7 +9,7 @@ public class ContactKeywordData
     public List<String> getAddContact_KeywordData() throws IOException
     {
         KeywordUtil keywordUtil = new KeywordUtil();
-        String path = System.getProperty("user.dir")+"KeywordData/Keyword Data.xlsx";
+        String path = System.getProperty("user.dir")+"/KeywordData/Keyword Data.xlsx";
         String sheetName = "Phone";
         String column = "Add Contact";
 

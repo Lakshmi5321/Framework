@@ -34,7 +34,7 @@ public class KeywordUtil
 
             for(int j=0;j<cols;j++)
             {
-                Cell cell = row.getCell(i);
+                Cell cell = row.getCell(j);
                 if(cell != null && !cell.toString().trim().isEmpty() && column.equals(cell.toString()))
                 {
                     colNum = j;
@@ -68,6 +68,7 @@ public class KeywordUtil
                 }
             }
         }
+        System.out.println(data);
         return data;
     }
 }

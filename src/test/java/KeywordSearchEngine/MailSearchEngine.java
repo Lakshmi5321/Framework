@@ -67,7 +67,7 @@ public class MailSearchEngine
             case "Click meet" : mailPage.clickMeet();
             break;
 
-            case "Click cancel" : mailPage.clickMeet();
+            case "Click cancel" : mailPage.clickCancel();
             break;
 
             case "Click new meeting" : mailPage.clickNewMeeting();
@@ -118,7 +118,7 @@ public class MailSearchEngine
             case "Click meet" : mailPage.clickMeet();
             break;
 
-            case "Click cancel" : mailPage.clickMeet();
+            case "Click cancel" : mailPage.clickCancel();
             break;
 
             case "Click navigation menu" : mailPage.clickNavigationMenu();
@@ -163,7 +163,7 @@ public class MailSearchEngine
             case "Click meet" : mailPage.clickMeet();
             break;
 
-            case "Click cancel" : mailPage.clickMeet();
+            case "Click cancel" : mailPage.clickCancel();
             break;
 
             case "Click navigation menu" : mailPage.clickNavigationMenu();

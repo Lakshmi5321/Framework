@@ -5,13 +5,12 @@ import ExcelDataProvider.ContactExcelData;
 import KeywordDataProvider.ContactKeywordData;
 import KeywordSearchEngine.ContactSearchEngine;
 import org.testng.annotations.Test;
-
 import java.io.IOException;
 import java.util.List;
 
 public class ContactTest extends BaseClass
 {
-    @Test(dataProvider = "Add Contact", dataProviderClass = ContactExcelData.class)
+    @Test(dataProvider = "Add Contact", dataProviderClass = ContactExcelData.class, description = "AddContact")
     public void addContactTest(String firstName,String lastName,String companyName,String phoneNumber) throws IOException
     {
         ContactSearchEngine contactSearchEngine = new ContactSearchEngine(driver);
@@ -24,8 +23,8 @@ public class ContactTest extends BaseClass
         }
     }
 
-    @Test(dataProvider = "Edit Contact",dataProviderClass = ContactExcelData.class)
-    public void editContactTest(String searchContact,String firstName,String lastName,String companyName,String phoneNumber) throws IOException
+    @Test(dataProvider = "Edit Contact",dataProviderClass = ContactExcelData.class,description = "EditContact")
+    public void editContactTest(String searchContact,String firstName,String lastName,String companyName,String phoneNumber) throws IOException, InterruptedException
     {
         ContactSearchEngine contactSearchEngine = new ContactSearchEngine(driver);
         ContactKeywordData contactKeywordData = new ContactKeywordData();
@@ -37,7 +36,7 @@ public class ContactTest extends BaseClass
         }
     }
 
-    @Test(dataProvider = "Delete Contact",dataProviderClass = ContactExcelData.class)
+    @Test(dataProvider = "Delete Contact",dataProviderClass = ContactExcelData.class,description = "DeleteContact")
     public void deleteContactTest(String searchContact) throws IOException
     {
         ContactSearchEngine contactSearchEngine = new ContactSearchEngine(driver);
