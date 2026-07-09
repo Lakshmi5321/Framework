@@ -67,14 +67,13 @@ public class BaseClass
 
     public void getScreenshot(String fileName) throws IOException
     {
-        if(subFolder == null)
+        if(subFolder==null)
         {
             LocalDateTime localDateTime = LocalDateTime.now();
             DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy_ss-mm-hh");
-            subFolder = localDateTime.format(dateTimeFormatter);
+            subFolder = dateTimeFormatter.format(localDateTime);
         }
-
-        TakesScreenshot takesScreenshot = (TakesScreenshot)driver;
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
         File destination = new File(System.getProperty("user.dir")+"/ExtentReports/Screenshots/"+subFolder+"/"+fileName+".jpg");
         FileUtils.copyFile(source,destination);

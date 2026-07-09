@@ -2,6 +2,7 @@ package KeywordSearchEngine;
 
 import Pages.MailPage;
 import io.appium.java_client.android.AndroidDriver;
+import org.testng.Assert;
 
 public class MailSearchEngine
 {
@@ -43,7 +44,8 @@ public class MailSearchEngine
             case "Click send" : mailPage.clickSend();
             break;
 
-            case "Check description" : mailPage.checkDescription("Sent");
+            case "Check description" :
+                Assert.assertTrue(mailPage.checkDescription("Sent"));
             break;
         }
     }
@@ -139,7 +141,7 @@ public class MailSearchEngine
             case "Click light" : mailPage.clickLight();
             break;
 
-            case "Check theme text" : mailPage.checkThemeText("Light");
+            case "Check theme text" : Assert.assertTrue(mailPage.checkThemeText("Light "));
             break;
         }
     }
@@ -184,7 +186,7 @@ public class MailSearchEngine
             case "Doubletap all gmail notifications toggle" : mailPage.doubleTapAction();
             break;
 
-            case "Check all gmail notifications text" : mailPage.checkAllGmailNotificationsText("Manage notifications");
+            case "Check all gmail notifications text" : Assert.assertTrue(mailPage.checkAllGmailNotificationsText("notifications"));
             break;
         }
     }

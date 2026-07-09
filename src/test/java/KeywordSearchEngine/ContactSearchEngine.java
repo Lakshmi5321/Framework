@@ -2,6 +2,7 @@ package KeywordSearchEngine;
 
 import Pages.ContactPage;
 import io.appium.java_client.android.AndroidDriver;
+import org.testng.Assert;
 
 public class ContactSearchEngine
 {
@@ -37,8 +38,8 @@ public class ContactSearchEngine
             case "Save" : contactPage.clickSave();
             break;
 
-            case "Title" : String str = firstName+"  "+lastName;
-                           contactPage.checkTitle(str);
+            case "Title" : String str = firstName+" "+lastName;
+                           Assert.assertTrue(contactPage.checkTitle(str));
                            break;
         }
     }
@@ -76,7 +77,7 @@ public class ContactSearchEngine
                 break;
 
             case "Title" : String str = firstName+" "+lastName;
-                contactPage.checkTitle(str);
+                Assert.assertTrue(contactPage.checkTitle(str));
                 break;
         }
     }
